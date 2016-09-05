@@ -12,6 +12,8 @@ $myfile = fopen($lockfile, "w") or die("Unable to open lock file!");
 fclose($myfile);
 
 
+$output = shell_exec('./latex_to_pdf.py');
+echo "<pre>$output</pre>";
 $output = shell_exec('./game_doc_matrix_update.py');
 echo "<pre>$output</pre>";
 unlink($lockfile);
