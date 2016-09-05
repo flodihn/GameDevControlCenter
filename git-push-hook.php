@@ -8,7 +8,7 @@
 $lockfile = "lockfile";
 if(file_exists($lockfile)) die ("Update already in progress");
 
-$myfile = fopen("lock/lockfile", "w") or die("Unable to open lock file!");
+$myfile = fopen($lockfile, "w") or die("Unable to open lock file!");
 fclose($myfile);
 
 
