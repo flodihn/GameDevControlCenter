@@ -10,4 +10,4 @@ print("Updating Game Documentation Matrix..." + gdcc_conf.GDD_DIR)
 
 subprocess.call(PDFLATEX_CMD, cwd=gdcc_conf.GDD_DIR)
 subprocess.call(PDFLATEX_CMD, cwd=gdcc_conf.GDD_DIR)
-subprocess.call(["cp", gdcc_conf.GDD_FILE, gdcc_conf.WWW_ROOT])
+subprocess.call(["cp", gdcc_conf.GDD_FILE + ".pdf", gdcc_conf.WWW_ROOT])
