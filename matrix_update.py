@@ -14,6 +14,12 @@ PDFLATEX_CMD = ["pdflatex", "matrix"]
 
 print("Updating Game Documentation Matrix..." + TEMPLATE_FILE)
 
+def pull_repo(repo_dir):
+	if repo_dir == "":
+		return
+	output = subprocess.call(["git", "pull", "origin", "master"], cwd=repo_dir)
+	print(output)
+
 def find_tex_files():
 	texfiles = []
 	for root, dirs, files in os.walk(gdcc_conf.GDD_DIR):
@@ -85,6 +91,10 @@ def build_matrix(all_features, implemented_client_features):
 	for feature in all_features:
 		write_matrix_table_feature(f, feature, implemented_client_features, count)
 		count += 1
+		if(count % 40 == 0):
+			write_matrix_table_footer(f)
+			write_matrix_table_header(f)
+			
 	write_matrix_table_footer(f)
 	f.close()
 
@@ -96,7 +106,7 @@ def write_matrix_table_header(f):
 	f.write(header)
 	
 def write_matrix_table_footer(f):
-	f.write("\\end{tabular}\n")
+	f.write("\\end{tabular}\\newline\n")
 
 def write_matrix_table_feature(f, feature, implemented_client_features, count):
 	line = ""
@@ -131,9 +141,14 @@ if __name__ == '__main__':
 	implemented_client_features = []
 	implemented_server_features = []
 
+
+	pull_repo(gdcc_conf.CLIENT_SOURCE_DIR)
+	pull_repo(gdcc_conf.SERVER_SOURCE_DIR)
+
 	for filename in texfiles:
 		features = find_features_in_tex_file(filename)
 		all_features = list(set(all_features + features))
+	all_features.sort()
 
 	client_source_files = find_source_files(
 		gdcc_conf.CLIENT_SOURCE_DIR,
