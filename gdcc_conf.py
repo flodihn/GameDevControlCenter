@@ -1,10 +1,10 @@
-GDD_DIR = "/home/farmgame/FarmingGameDocs/GDD/"
-GDD_FILE = "/home/farmgame/FarmingGameDocs/GDD/GDD"
+GDD_DIR = "/path/to/Docs/GDD/"
+GDD_FILE = "/path/to/Docs/GDD/GDD"
 WWW_ROOT = "/var/www/GameDevControlCenter"
 
 # Client source files
 CLIENT_SOURCE_EXT = [".cs"]
-CLIENT_SOURCE_DIR = "/home/farmgame/FarmingGameClient/"
+CLIENT_SOURCE_DIR = "/path/to/GameClientRepo/"
 # C++/C# style comments, for example:
 # // @ImplementedFeature{XXX}
 CLIENT_COMMENT = "// "

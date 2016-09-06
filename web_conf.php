@@ -1,7 +1,7 @@
 <?php
-$GAME_NAME = "Farming Game";
+$GAME_NAME = "Name of the Game";
 $GDD_LINK = "GDD.pdf";
 // PROTOTYPE | ALPHA | BETA | RELEASED 
 $PROJECT_STAGE = "PROTOTYPE";
-$HOOK_PASSWD = "horseshoematterfoobar";
+$HOOK_PASSWD = "mysecretpassword";
 ?>
