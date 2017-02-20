@@ -19,7 +19,8 @@ Configure to fit your project:
 - GDD_LINK - The location of the generated GDD in pdf format. HINT: The gdd_to_pdf.py scripts generates this file.
 - PROJECT STAGE - Set this to either PROTOTYPE, ALPHA, BETA or RELEASED depending what status your project is currenlty in.
 - HOOK_PASSWD - Should have been used for using git web hooks, but never got around to implemented it.
-## Markup:
+
+## Markup
 - \feature{My Feature} - Use this in the GDD to markup existing features.
 - \ImplementedFeature{My Feature} - Use this in the the source repository to markup a feature as implemented.
 
