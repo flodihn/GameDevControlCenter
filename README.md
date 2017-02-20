@@ -37,4 +37,7 @@ A script like this could be created to updated the documenation matrix and autom
     ssh-add
 
     /home/user/GameDevControlCenter/matrix_update.py && /home/user/GameDevControlCenter/gdd_to_pdf.py
-```            
+```
+Note that this script depends on the default ssh key in ~/.ssh/id_rsa is no password and can be used to pull both the source and documentation repositories. If another key is used provide correct path to ssh-add, for example:
+
+    ssh-add /home/user/.ssh/my_other_key.rsa            
