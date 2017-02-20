@@ -40,4 +40,7 @@ A script like this could be created to updated the documenation matrix and autom
 ```
 Note that this script depends on the default ssh key in ~/.ssh/id_rsa is no password and can be used to pull both the source and documentation repositories. If another key is used provide correct path to ssh-add, for example:
 
-    ssh-add /home/user/.ssh/my_other_key.rsa            
+    ...
+    trap cleanup EXIT
+    ssh-add /home/user/.ssh/my_other_key.rsa
+    ...
