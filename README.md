@@ -1,5 +1,8 @@
 # GameDevControlCenter
-A web and latex based control center for managing game development.
+A web and latex based control center for managing game development. The system generates a web page with a documentation matrix by extracting features from a GDD and show current development status for each feature. Below is a sample screenshot:
+
+[[https://github.com/flodihn/GameDevControlCenter/blob/master/GameDevControlCenterScreenshot.png|alt=Screenshot]]
+
 
 # Setup
 Clone this repository wherever you like, for example:
